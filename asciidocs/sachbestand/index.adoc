@@ -1,0 +1,48 @@
+= Sachstandsbericht: Helferlein
+
+== Sachstand:
+Derzeit besteht eine mit Angular entwickelte Anwendung,
+die über Electron lokal läuft. Electron wird benötigt,
+um die TCP-Kommunikation mit den NAOs zu ermöglichen,
+da die dafür benötigten npm packages (tcp-client) im Web
+nicht verwendet werden können.
+
+Die NAOs verschicken ihre Nachrichten mit allen Debug-Informationen
+als UInt8 Arrays, mit einem Header der 16 Byte lang ist. Der Code, der diese
+Nachrichten empfängt, den Header herausließt und dann die
+Nachricht in ein JSON-Objekt umwandelt funktioniert bereits,
+allerdings konnten durch das Distance Learning und dem
+daraus folgenden Fehlen von Robotern noch keine echten Daten
+verarbeitet werden.
+
+Die grafische Oberfläche setzt sich aus
+mehreren Feldern, zusammen. Die Summe dieser Felder heißt Layout.
+In jedes dieser Felder lässt sich dann jeweils ein Widget laden.
+Widgets können beispielsweise einfach Daten vom NAO als Text sein,
+oder Live-Bilder von den Kameras oder sogar eine Topdown-Sicht
+des Spielfeldes auf dee Positionen und Sichtkegel von NAOs
+angezeigt werden können. Das Portal-System, mit dem die Widgets
+geladen werden, ist bereits lauffähig, allerdings sind die Widgets
+selbst nur teilweise implementiert. Zudem fehlt noch eine
+Funktion zum Erstellen und Speichern von eigenen Layouts.
+
+== Was habe ich bereits getan:
+
+*   Connection-Inputfelder positioniert und anschaulicher gemacht
+*   das Layout so geändert(Größe der Felder, Widget,...)
+*   Überlappungen verhindert
+*   minimale Seitengröße festgelegt
+*   Text-Widgets
+*   Config-Widgets
+*   sonstige "quality of life" Änderungen...
+
+
+== Was werde ich tun:
+
+*   Angular noch besser verstehen lernen(online Kurse machen,
+mir Übungen von den vierten zum Üben holen, den aktuellen
+Code noch genauer ansehen)
+*   das Helferlein Tool übernehmen sodass ich nächstes Jahr
+weitere Personen einschulen kann
+*   mich zu Electron File IO genauer erkundigen und hinein lesen.
+Und bestenfalls dies daraufhin anwenden um Configs lokal zu speichern

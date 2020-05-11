@@ -13,7 +13,7 @@
 Version: 1.0 +
 Version Date: 20.1.2020 +
 Version Notes: Erste Version für uns, es gibt schon einen bestehenden Teil des Projekts +
-Author: Vanessa Primetzhofer <vaniprimetz@gmail.com>, Quirin Ecker <quirin.ecker@bajupa.com> +
+Author: Vanessa Primetzhofer, Quirin Ecker +
 
 ++++
 <link rel="stylesheet"  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,11 +31,10 @@ In Deutschland und anderen Ländern werden bereits Roboter Soccer Wettkämpfe ve
 finden meist mit Studenten von den verschiedensten Universitäten statt.
 Von den verschiedenen Teams gibt es schon bestehenden Code. Diese sind alle frei zugänglich.
 
-In unserem Schulinventar befinden sich xy Roboter. Außerdem ein großer Spielrasen, ein kleiner
-Spielrasen, zwei Tore und weiteres.
+In unserem Schulinventar befinden sich 8 Roboter, zwei Spielrasen, zwei Tore und weiteres.
 Das Team an Programmierern besteht aus
 12 Schülern und einem Lehrer. Die Schüler der Zweige Informatik und Medientechnik sind in
-vier Gruppen aufgeteilt. Team-Vision, Team-Motion, Team-Brain und Tools-Team. Wobei die
+vier Gruppen aufgeteilt. Team-Vision, Team-Motion, Team-Brain und dem Tools-Team. Wobei die
 Strategie im Brain-Team entworfen und programmiert wird.
 
 === Präsentationsanwendung
@@ -157,7 +156,7 @@ a|
 // <Rollenname>: Beschreibung des Nutzers, der mit dem System interagiert. Nutzer können auch andere Systeme sein.>
 
 | Auslösendes Ereignis:
-| Ball ist in gegnnerischer Hälfte und freie Sicht aufs Tor
+| Ball ist in gegnerischer Hälfte und freie Sicht aufs Tor
 |===
 
 
