@@ -27,13 +27,13 @@ zum Starten:
 npm run electron
 ----
 
-image::Verbindung.jpg[]
+image::verbindung.jpeg[]
 
-image::Widgets.jpg[]
+image::widgets.jpeg[]
 
 == Systemarchitektur
 
-image::Systemarchitektur.jpg[]
+image::Systemarchitektur.jpeg[]
 
 == JSON Beispiel
 
