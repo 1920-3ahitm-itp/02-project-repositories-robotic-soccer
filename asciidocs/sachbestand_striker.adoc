@@ -1,0 +1,16 @@
+https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/striker.html[*Striker*,role=black]
+
+== 1. Sachbestand
+Es besteht aktuell ein Striker der spielen kann.Der Striker hat die funktion in verschiedene Aktionen auszuführen unterscheidbar an der Postition des Balles und an der Sicherheit des Ballkontakts.Momentan greift er den Ball and wenn dieser auf der gegnerischen Seite ist.Ist dieser auf seiner eigenen Hälfte wartet er bis einer seiner anderen Team Mitglieder ihn auf die gegnerische seite kickt.Befindet sich der Striker aber auch in der eigenen Hälfte versucht der den ball richtung der gegnerischen Hälfte zu kicken.Ist er sich nicht sicher wo der Ball ist fragt er was er anderes machen kann.Als Beispiel nach dem Ball suchen.In Zukunft soll der Roboter noch intelligenter kicken und sich an den gegnern orientieren.
+
+== 2. Was Habe ich bereits getan
+
+- Desperation beachten eingebaut (wenn er den Ball nicht mehr findet bescheid geben)
+- Kicken im richtigen Zeitpunkt
+- Dribbeln im richtigen Zeitpunkt
+
+== 3. Was werde ich tun
+
+- Teammitglieder haben Zonen eingebaut die man bei anderen Rollen beachten kann.Ich werde diese in mein behavior einbauen.
+- Versuchen das Ganze System des Projektes besser zu verstehen, damit ich auch ohen die Hilfe der 5. Klassen weiterentwickeln kann
+

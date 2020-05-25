@@ -1,5 +1,7 @@
 = Helferlein
 
+https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/index.html[*Index*,role=black]
+
 == Allgemein
 
 Das Helferlein wird zukünftig Mate ersetzten.
@@ -64,3 +66,5 @@ image::Systemarchitektur.jpeg[]
 
 Nao glaubt er steht an seiner Position, was man dann an den angezeigten Werten erkennen kann,
 jedoch steht er in Wirklichkeit an einer anderen Position am Feld.
+
+https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/sachbestand.html[Sachstand Helferlein,role=white]

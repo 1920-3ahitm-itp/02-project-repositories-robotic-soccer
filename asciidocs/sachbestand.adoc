@@ -1,5 +1,7 @@
 = Sachstandsbericht: Helferlein
 
+https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/helferlein.html[*Helferlein*,role=black]
+
 == Sachstand:
 Derzeit besteht eine mit Angular entwickelte Anwendung,
 die über Electron lokal läuft. Electron wird benötigt,

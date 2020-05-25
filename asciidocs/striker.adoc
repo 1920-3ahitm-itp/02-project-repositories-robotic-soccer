@@ -1,0 +1,92 @@
+= Striker
+
+https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/index.html[*Index*,role=black]
+
+== Setup for the Striker Developement
+
+=== Set the Force Role for Testing
+Under `./home/configurations/simrobot/head/robot3/`, there is a json file with the following content.
+
+[source,json]
+----
+{
+  "forceRole": "none"
+}
+----
+
+For testing purposes the role for the simulation robot can be changed to the striker role by replacing the "none" by "striker".
+
+=== Run the Simrobot Setup
+
+In the project root run the following command.
+
+[source,sh]
+----
+./scripts/midas setup simrobot
+----
+
+=== Compile the Simrobot
+Execute the following command to compile the simrobot
+
+[source,sh]
+----
+./tools/SimRobot/build_simrobot
+----
+
+The compiled files will be stored under `./tools/SimRobot/build/`
+== Running and Compiling the Striker
+
+=== Compile the Project
+
+[source,sh]
+----
+./scripts/midas compile develop simrobot
+----
+
+=== Start the Application
+Execute the following command to start the simrobot
+
+[source,sh]
+----
+./tools/SimRobot/build/SimRobot
+----
+
+This will open a SimRobot Window.You can choose one of the available maps in the scene folder under `./tools/SimRobot/scenes/`.These Maps use different simulation robots.As one can see in step one robot 3 has been forced to role striker.Since map `1Player.ros2` defines the robot 3 as the only player we select this map for testing the striker.
+
+image::img01.png[]
+
+image::img02.png[]
+
+=== Mate
+With mate one can debug the striker with values delivered by the robot.One can also view the StrikerAction for the Striker with it's values.
+
+Start Mate with the following command
+
+`./tools/mate/start.sh`
+
+If it won't work the checkout the readme under the mate directory.
+
+With mate you can connect using the following path `/tmp/simrobot/robot3`.
+
+== Striker Structure
+The striker consists of three files.
+
+=== Striker Action
+This file is located under `./src/tuhhsdk/Data/DucksStrikerAction.hpp`.
+
+This file is a data container for all the states the Striker is currently in.
+
+=== Striker Action Provider
+This file is located under
+`./src/brain/Behavior/DucksStrikerActionProvider.hpp`
+with the cpp file under
+`./src/brain/Behavior/DucksStrikerActionProvider.cpp`
+
+This C++ class provides the Striker Action.It contains the basic behavior.What should it do in certain scenarios?
+
+=== Striker
+This file is located under `./src/brain/Behavior/DucksBehaviour/Roles/Striker.hpp`
+
+This File will use the Striker Action and will run the necessary commands.
+
+https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/sachbestand_striker.html[Sachstand Striker,role=white]

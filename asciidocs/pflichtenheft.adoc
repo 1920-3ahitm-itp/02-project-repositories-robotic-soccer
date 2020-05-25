@@ -1,0 +1,260 @@
+= Pflichtenheft Humanoid Soccer
+
+https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/index.html[*Index*,role=black] +
+
+// Settings
+:source-highlighter: coderay
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+// Refs:
+:imagesdir: images
+:sourcedir-code: src/main/java/at/htl/jdbcprimer
+:sourcedir-test: src/test/java/at/htl/jdbcprimer
+:toc:
+
+Version: 1.0 +
+Version Date: 20.1.2020 +
+Version Notes: Erste Version für uns, es gibt schon einen bestehenden Teil des Projekts +
+Author: Vanessa Primetzhofer, Quirin Ecker +
+
+++++
+<link rel="stylesheet"  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+++++
+
+
+== Beschreibung der Ausgangssituation
+Es gibt seitens der Schule und der Schüler großes Interesse an Wettkämpfen zwischen
+Robotern die Fußball spielen, teilzunehmen. Auch Sponsoren dazu gibt es für Schule die
+dies erfolgreich antreiben. Und da das Interesse generell in vielen Ländern vorhanden ist
+finden jedes Jahr internationale Wettkämpfe dazu statt um sich zu messen.
+
+== Istzustand
+In Deutschland und anderen Ländern werden bereits Roboter Soccer Wettkämpfe veranstaltet.Diese
+finden meist mit Studenten von den verschiedensten Universitäten statt.
+Von den verschiedenen Teams gibt es schon bestehenden Code. Diese sind alle frei zugänglich.
+
+In unserem Schulinventar befinden sich 8 Roboter, zwei Spielrasen, zwei Tore und weiteres.
+Das Team an Programmierern besteht aus
+12 Schülern und einem Lehrer. Die Schüler der Zweige Informatik und Medientechnik sind in
+vier Gruppen aufgeteilt. Team-Vision, Team-Motion, Team-Brain und dem Tools-Team. Wobei die
+Strategie im Brain-Team entworfen und programmiert wird.
+
+=== Präsentationsanwendung
+- Präsentation bei Auftritten (Tag der offenen Tür, Coder Dojo, etc.)
+- Wettkämpfe (German Open 2020)
+
+== Problemstellung
+Viele Teile des Codes sind noch die von dem Programm der HULKS.
+Bis April 2020 sollten die meisten Teile von den Schülern der HTL sein,
+da der Wettkampf im April 2020 stattfindet. Auch einige Erweiterungen die
+geplant sind sollten bis dahin einwandfrei funktionieren.
+
+== Aufgabenstellung
+Die Roboter sollten die Möglichkeit einer neuen Rolle haben, den Striker.
+Der Striker soll den alten Code der HULKS ersetzten.
+Hierfür muss zuerst eine Taktik überlegt werden. Bei dieser Taktik werden vorerst unter anderem
+einige optionale Elemente vorhanden sein.
+Diese Taktik muss daraufhin ausprogrammiert werden.
+
+=== Funktionale Anforderungen
+
+==== Anwendungsfalldiagramm (Use-Case-Diagram)
+
+[plantuml, puml, svg]
+....
+@startuml
+
+left to right direction
+
+:Trainer:
+
+rectangle Striker {
+    Trainer -- (Ball Anstoß)
+    (Ball Anstoß) ..> (BallPosition) : needs
+    (Ball Anstoß) ..> (GoalPosition) : need
+    (Ball Anstoß) ..> (Spiel Start) : Condition
+    Trainer -- (Schuss ins Tor)
+    (Schuss ins Tor) ..> (Wenn Ball in gegnerischer Hälfte) : condition
+    (Schuss ins Tor) ..> (BallPosition_1) : needs
+    (Schuss ins Tor) ..> (GoalPosition_1) : needs
+    Trainer -- (Warten auf Mitspieler)
+    (Warten auf Mitspieler) ..> (Wenn Ball im eigenen Feld) : confition
+    (Warten auf Mitspieler) ..> (MitspielerPosition) : needs
+    (Warten auf Mitspieler) ..> (BallPosition_2) : needs
+    Trainer -- (Passen) : optional
+    (Passen) ..> (Wenn zu viele Gegner vor ihm) : confition
+    (Passen) ..> (obstacleMap) : needs
+    (Passen) ..> (BallPosition_3) : needs
+    (Passen) ..> (GoalPosition_2) : needs
+}
+
+@enduml
+....
+
+==== Use-Case 1: Ball Anstoß
+
+===== Charakterisierende Informationen Use-Case 1
+
+[cols=2]
+|===
+| Übergeordneter elementarer Geschäftsprozess:
+| Ball anstoßen
+
+| Ziel des Use Cases:
+| Der Ball landet im gegnerischen Feld
+
+| Umgebende Systemgrenze:
+| Um die Bewegungen der Roboter und das Erkennen von zum Beispiel dem Ball, der Roboter müssen wir uns nicht kümmern
+
+| Vorbedingung:
+| Nao nimmt seine fixe Anstoßposition ein
+
+| Bedingung bei erfolgreicher Ausführung:
+| Richtige Position des Naos
+
+| Beschreibung:
+a|
+* Nao positioniert sich so, dass er schießen kann
+* Schuss
+
+| Beteiligte Nutzer:
+| Die anderen Roboter aus dem eigenen Team
+// <Rollenname>: Beschreibung des Nutzers, der mit dem System interagiert. Nutzer können auch andere Systeme sein.>
+
+| Auslösendes Ereignis:
+| Spielstart
+|===
+
+===== GUI für den Aufruf des Use-Case 1
+
+==== Use-Case Schuss ins Tor
+
+===== Charakterisierende Informationen Use-Case 1
+
+[cols=2]
+|===
+| Übergeordneter elementarer Geschäftsprozess:
+| Schuss ins Tor
+
+| Ziel des Use Cases:
+| Der Ball landet im gegnerischen Tor
+
+| Umgebende Systemgrenze:
+| Um die Bewegungen der Roboter und das Erkennen von zum Beispiel dem Ball, der Roboter müssen wir uns nicht kümmern
+
+| Vorbedingung:
+| Der Nao ist zum Ball gegangen und steht direkt vor ihm, in Blickrichtung Tor
+
+| Bedingung bei erfolgreicher Ausführung:
+| Ball muss in gegnerischen Feld liegen. Der Nao braucht eine "freie" Sicht auf das Tor
+
+| Beschreibung:
+a|
+* Nao positioniert sich so, dass er schießen kann
+* Schuss
+
+| Beteiligte Nutzer:
+| Die anderen Roboter aus dem eigenen Team
+// <Rollenname>: Beschreibung des Nutzers, der mit dem System interagiert. Nutzer können auch andere Systeme sein.>
+
+| Auslösendes Ereignis:
+| Ball ist in gegnerischer Hälfte und freie Sicht aufs Tor
+|===
+
+
+==== Use-Case Warten auf Mitspieler
+
+===== Charakterisierende Informationen Use-Case 1
+
+[cols=2]
+|===
+| Übergeordneter elementarer Geschäftsprozess:
+| Warten auf Mitspieler
+
+| Ziel des Use Cases:
+| Der Roboter steht auf seiner Position und wartet aufmerksam
+
+| Umgebende Systemgrenze:
+| Um die Bewegungen der Roboter und das Erkennen von zum Beispiel dem Ball, der Roboter müssen wir uns nicht kümmern
+
+| Vorbedingung:
+| steht auf seiner Position
+
+| Bedingung bei erfolgreicher Ausführung:
+| Mitspieler erledigt seinen Part
+
+| Beschreibung:
+a|
+* Nao steht auf seiner Position
+* Nao beobachtet seine Umgebung
+
+
+| Beteiligte Nutzer:
+| Die anderen Roboter aus dem eigenen Team
+// <Rollenname>: Beschreibung des Nutzers, der mit dem System interagiert. Nutzer können auch andere Systeme sein.>
+
+| Auslösendes Ereignis:
+| Ball im eigenen Feld
+|===
+
+==== Use-Case Passen
+
+===== Charakterisierende Informationen Use-Case 1
+
+[cols=2]
+|===
+| Übergeordneter elementarer Geschäftsprozess:
+| Ball passen
+
+| Ziel des Use Cases:
+| Der Ball landet bei einem freistehenden Mitspieler
+
+| Umgebende Systemgrenze:
+| Um die Bewegungen der Roboter und das Erkennen von zum Beispiel dem Ball, der Roboter müssen wir uns nicht kümmern
+
+| Vorbedingung:
+| Tor ist von Gegnern verstellt und ein Torschuss ist nicht möglich
+
+| Bedingung bei erfolgreicher Ausführung:
+| Mitspieler im gegnerischen Feld und "frei"
+
+| Beschreibung:
+a|
+* prüfen ob Mitspieler im gegnerischen Feld
+* nachsehen ob Mitspieler "frei"
+* Pass zu Mitspieler
+
+| Beteiligte Nutzer:
+| Die anderen Roboter aus dem eigenen Team
+// <Rollenname>: Beschreibung des Nutzers, der mit dem System interagiert. Nutzer können auch andere Systeme sein.>
+
+| Auslösendes Ereignis:
+| kein möglicher Torschuss
+|===
+
+== Zielsetzung
+- C++ lernen
+- Angular lernen
+- ActionStrikerProvider Module implementieren
+- Striker Module implementieren
+- ActionStriker implementieren
+
+== Mengengerüst
+Es werden 4 Roboter für ein Spiel gebraucht, außerdem einen Computer wo die Applikation gestartet werden.
+Ein letzter Computer wird gebraucht für den Game Controller, der das ganze Spiel zwischen den Robotern steuert.
+
+== Gant-Diagram
+
+[plantuml,gantt-diagramm,png]
+----
+@startuml
+[Striker Action Container] lasts 2 weeks
+[Striker Behavior] lasts 1 weeks
+[Striker Behavior] starts at [Striker Action Container]'s end
+[Urgency] lasts 3 days
+[Urgency] starts at [Striker Behavior]'s end
+[Zones] lasts 2 weeks
+[Zones] starts at [Urgency]'s end
+
+@enduml
+----
