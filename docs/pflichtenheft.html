@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <link rel="icon" type="image/png" href="themes/favicon.png">
-<title>Untitled</title>
+<title>Pflichtenheft Humanoid Soccer</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -446,19 +446,391 @@ pre.rouge .hll * {
 }
 </style>
 </head>
-<body class="article">
+<body class="article toc2 toc-left">
 <div id="header">
+<h1>Pflichtenheft Humanoid Soccer</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_beschreibung_der_ausgangssituation">1. Beschreibung der Ausgangssituation</a></li>
+<li><a href="#_istzustand">2. Istzustand</a>
+<ul class="sectlevel2">
+<li><a href="#_präsentationsanwendung">2.1. Präsentationsanwendung</a></li>
+</ul>
+</li>
+<li><a href="#_problemstellung">3. Problemstellung</a></li>
+<li><a href="#_aufgabenstellung">4. Aufgabenstellung</a>
+<ul class="sectlevel2">
+<li><a href="#_funktionale_anforderungen">4.1. Funktionale Anforderungen</a></li>
+</ul>
+</li>
+<li><a href="#_zielsetzung">5. Zielsetzung</a></li>
+<li><a href="#_mengengerüst">6. Mengengerüst</a></li>
+<li><a href="#_gant_diagram">7. Gant-Diagram</a></li>
+</ul>
+</div>
 </div>
 <div id="content">
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p><a href="https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/docs/helferlein.html" class="black"><strong>Helferlein</strong></a><br>
-<a href="https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/docs/striker.html" class="black"><strong>Striker</strong></a><br>
-<a href="https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/docs/pflichtenheft.html" class="black"><strong>Pflichtenheft</strong></a><br></p>
+<p>Version: 1.0<br>
+Version Date: 20.1.2020<br>
+Version Notes: Erste Version für uns, es gibt schon einen bestehenden Teil des Projekts<br>
+Author: Vanessa Primetzhofer, Quirin Ecker<br></p>
+</div>
+<link rel="stylesheet"  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</div>
+</div>
+<div class="sect1">
+<h2 id="_beschreibung_der_ausgangssituation"><a class="anchor" href="#_beschreibung_der_ausgangssituation"></a>1. Beschreibung der Ausgangssituation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Es gibt seitens der Schule und der Schüler großes Interesse an Wettkämpfen zwischen
+Robotern die Fußball spielen, teilzunehmen. Auch Sponsoren dazu gibt es für Schule die
+dies erfolgreich antreiben. Und da das Interesse generell in vielen Ländern vorhanden ist
+finden jedes Jahr internationale Wettkämpfe dazu statt um sich zu messen.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_istzustand"><a class="anchor" href="#_istzustand"></a>2. Istzustand</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In Deutschland und anderen Ländern werden bereits Roboter Soccer Wettkämpfe veranstaltet.Diese
+finden meist mit Studenten von den verschiedensten Universitäten statt.
+Von den verschiedenen Teams gibt es schon bestehenden Code. Diese sind alle frei zugänglich.</p>
+</div>
+<div class="paragraph">
+<p>In unserem Schulinventar befinden sich 8 Roboter, zwei Spielrasen, zwei Tore und weiteres.
+Das Team an Programmierern besteht aus
+12 Schülern und einem Lehrer. Die Schüler der Zweige Informatik und Medientechnik sind in
+vier Gruppen aufgeteilt. Team-Vision, Team-Motion, Team-Brain und dem Tools-Team. Wobei die
+Strategie im Brain-Team entworfen und programmiert wird.</p>
+</div>
+<div class="sect2">
+<h3 id="_präsentationsanwendung"><a class="anchor" href="#_präsentationsanwendung"></a>2.1. Präsentationsanwendung</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Präsentation bei Auftritten (Tag der offenen Tür, Coder Dojo, etc.)</p>
+</li>
+<li>
+<p>Wettkämpfe (German Open 2020)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_problemstellung"><a class="anchor" href="#_problemstellung"></a>3. Problemstellung</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Viele Teile des Codes sind noch die von dem Programm der HULKS.
+Bis April 2020 sollten die meisten Teile von den Schülern der HTL sein,
+da der Wettkampf im April 2020 stattfindet. Auch einige Erweiterungen die
+geplant sind sollten bis dahin einwandfrei funktionieren.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aufgabenstellung"><a class="anchor" href="#_aufgabenstellung"></a>4. Aufgabenstellung</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Die Roboter sollten die Möglichkeit einer neuen Rolle haben, den Striker.
+Der Striker soll den alten Code der HULKS ersetzten.
+Hierfür muss zuerst eine Taktik überlegt werden. Bei dieser Taktik werden vorerst unter anderem
+einige optionale Elemente vorhanden sein.
+Diese Taktik muss daraufhin ausprogrammiert werden.</p>
+</div>
+<div class="sect2">
+<h3 id="_funktionale_anforderungen"><a class="anchor" href="#_funktionale_anforderungen"></a>4.1. Funktionale Anforderungen</h3>
+<div class="sect3">
+<h4 id="_anwendungsfalldiagramm_use_case_diagram"><a class="anchor" href="#_anwendungsfalldiagramm_use_case_diagram"></a>4.1.1. Anwendungsfalldiagramm (Use-Case-Diagram)</h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/puml.svg" alt="puml" width="732" height="969">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_use_case_1_ball_anstoß"><a class="anchor" href="#_use_case_1_ball_anstoß"></a>4.1.2. Use-Case 1: Ball Anstoß</h4>
+<div class="sect4">
+<h5 id="_charakterisierende_informationen_use_case_1"><a class="anchor" href="#_charakterisierende_informationen_use_case_1"></a>Charakterisierende Informationen Use-Case 1</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Übergeordneter elementarer Geschäftsprozess:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ball anstoßen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ziel des Use Cases:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Der Ball landet im gegnerischen Feld</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Umgebende Systemgrenze:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Um die Bewegungen der Roboter und das Erkennen von zum Beispiel dem Ball, der Roboter müssen wir uns nicht kümmern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vorbedingung:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nao nimmt seine fixe Anstoßposition ein</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bedingung bei erfolgreicher Ausführung:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Richtige Position des Naos</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beschreibung:</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Nao positioniert sich so, dass er schießen kann</p>
+</li>
+<li>
+<p>Schuss</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beteiligte Nutzer:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die anderen Roboter aus dem eigenen Team</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Auslösendes Ereignis:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spielstart</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_gui_für_den_aufruf_des_use_case_1"><a class="anchor" href="#_gui_für_den_aufruf_des_use_case_1"></a>GUI für den Aufruf des Use-Case 1</h5>
+
+</div>
+</div>
+<div class="sect3">
+<h4 id="_use_case_schuss_ins_tor"><a class="anchor" href="#_use_case_schuss_ins_tor"></a>4.1.3. Use-Case Schuss ins Tor</h4>
+<div class="sect4">
+<h5 id="_charakterisierende_informationen_use_case_1_2"><a class="anchor" href="#_charakterisierende_informationen_use_case_1_2"></a>Charakterisierende Informationen Use-Case 1</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Übergeordneter elementarer Geschäftsprozess:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schuss ins Tor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ziel des Use Cases:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Der Ball landet im gegnerischen Tor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Umgebende Systemgrenze:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Um die Bewegungen der Roboter und das Erkennen von zum Beispiel dem Ball, der Roboter müssen wir uns nicht kümmern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vorbedingung:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Der Nao ist zum Ball gegangen und steht direkt vor ihm, in Blickrichtung Tor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bedingung bei erfolgreicher Ausführung:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ball muss in gegnerischen Feld liegen. Der Nao braucht eine "freie" Sicht auf das Tor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beschreibung:</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Nao positioniert sich so, dass er schießen kann</p>
+</li>
+<li>
+<p>Schuss</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beteiligte Nutzer:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die anderen Roboter aus dem eigenen Team</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Auslösendes Ereignis:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ball ist in gegnerischer Hälfte und freie Sicht aufs Tor</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_use_case_warten_auf_mitspieler"><a class="anchor" href="#_use_case_warten_auf_mitspieler"></a>4.1.4. Use-Case Warten auf Mitspieler</h4>
+<div class="sect4">
+<h5 id="_charakterisierende_informationen_use_case_1_3"><a class="anchor" href="#_charakterisierende_informationen_use_case_1_3"></a>Charakterisierende Informationen Use-Case 1</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Übergeordneter elementarer Geschäftsprozess:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Warten auf Mitspieler</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ziel des Use Cases:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Der Roboter steht auf seiner Position und wartet aufmerksam</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Umgebende Systemgrenze:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Um die Bewegungen der Roboter und das Erkennen von zum Beispiel dem Ball, der Roboter müssen wir uns nicht kümmern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vorbedingung:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">steht auf seiner Position</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bedingung bei erfolgreicher Ausführung:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mitspieler erledigt seinen Part</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beschreibung:</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Nao steht auf seiner Position</p>
+</li>
+<li>
+<p>Nao beobachtet seine Umgebung</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beteiligte Nutzer:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die anderen Roboter aus dem eigenen Team</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Auslösendes Ereignis:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ball im eigenen Feld</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_use_case_passen"><a class="anchor" href="#_use_case_passen"></a>4.1.5. Use-Case Passen</h4>
+<div class="sect4">
+<h5 id="_charakterisierende_informationen_use_case_1_4"><a class="anchor" href="#_charakterisierende_informationen_use_case_1_4"></a>Charakterisierende Informationen Use-Case 1</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Übergeordneter elementarer Geschäftsprozess:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ball passen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ziel des Use Cases:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Der Ball landet bei einem freistehenden Mitspieler</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Umgebende Systemgrenze:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Um die Bewegungen der Roboter und das Erkennen von zum Beispiel dem Ball, der Roboter müssen wir uns nicht kümmern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vorbedingung:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tor ist von Gegnern verstellt und ein Torschuss ist nicht möglich</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bedingung bei erfolgreicher Ausführung:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mitspieler im gegnerischen Feld und "frei"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beschreibung:</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>prüfen ob Mitspieler im gegnerischen Feld</p>
+</li>
+<li>
+<p>nachsehen ob Mitspieler "frei"</p>
+</li>
+<li>
+<p>Pass zu Mitspieler</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Beteiligte Nutzer:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Die anderen Roboter aus dem eigenen Team</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Auslösendes Ereignis:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">kein möglicher Torschuss</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_zielsetzung"><a class="anchor" href="#_zielsetzung"></a>5. Zielsetzung</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>C++ lernen</p>
+</li>
+<li>
+<p>Angular lernen</p>
+</li>
+<li>
+<p>ActionStrikerProvider Module implementieren</p>
+</li>
+<li>
+<p>Striker Module implementieren</p>
+</li>
+<li>
+<p>ActionStriker implementieren</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mengengerüst"><a class="anchor" href="#_mengengerüst"></a>6. Mengengerüst</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Es werden 4 Roboter für ein Spiel gebraucht, außerdem einen Computer wo die Applikation gestartet werden.
+Ein letzter Computer wird gebraucht für den Game Controller, der das ganze Spiel zwischen den Robotern steuert.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gant_diagram"><a class="anchor" href="#_gant_diagram"></a>7. Gant-Diagram</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="images/gantt-diagramm.png" alt="gantt diagramm" width="609" height="81">
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-05-25 13:39:14 UTC
+Last updated 2020-05-25 13:38:07 UTC
 </div>
 </div>
 </body>
