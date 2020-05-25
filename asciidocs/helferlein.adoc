@@ -1,0 +1,66 @@
+= Helferlein
+
+== Allgemein
+
+Das Helferlein wird zukünftig Mate ersetzten.
+Es dient zur Datenüberwachung, Anzeige von Bildübertagungen
+und sonstigen Informationenanzeige von Werten
+die vom Nao kommen, mit dem man verbunden ist.
+Also kurz beschrieben dient es zum Monitoring.
+Man kann selbst bestimmen von welchen Keys man die Values sehen
+will und diese werden, wenn man mit einem Nao verbunden ist
+angezeigt.
+
+== Benutzung
+
+vom Helferleinverzeichnis aus:
+
+----
+
+cd robo-ducks-core/tools/helferlein/helferlein
+
+----
+
+zum Starten:
+
+----
+npm run electron
+----
+
+image::Verbindung.jpg[]
+
+image::Widgets.jpg[]
+
+== Systemarchitektur
+
+image::Systemarchitektur.jpg[]
+
+== JSON Beispiel
+
+[source,json]
+----
+
+{
+  "keys": [
+{
+    "isImage": true,
+    "key": "Brain.LineDetection.top_image_lines"
+},
+{
+    "key": "Brain.FootCollisionDetector.rightFoot",
+    "timestamp": 40061,
+    "value": 0
+},
+{
+    "key": "Brain.FootCollisionDetector.leftFoot",
+    "timestamp": 40061,
+    "value": 0
+}
+          ]
+}
+----
+
+== Beispiel für Anwendung
+
+Nao glaubt er steht an seiner Position, was man dann an den angezeigten Werten erkennen kann,
+jedoch steht er in Wirklichkeit an einer anderen Position am Feld.
