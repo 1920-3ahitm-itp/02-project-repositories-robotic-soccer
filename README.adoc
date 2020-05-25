@@ -1,3 +1,10 @@
+= Humanoid Robotic Soccer
+
+https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/index.html[*Main Page*,role=black] +
+
+
+
+////
 = asciidoctor-docker-template
 :imagesdir: images
 :icons: font
@@ -158,4 +165,6 @@ gh-pages need the doc-folder for publishing.
 
 image:doc-folder-output.png[]
 
+
+////
 
