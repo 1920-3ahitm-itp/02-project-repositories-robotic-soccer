@@ -8,6 +8,3 @@ https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/striker
 
 == Vanessa Primetzhofer
 https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/helferlein.html[*Helferlein*,role=black] +
-https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/pflichtenheft_helferlein.html[*Pflichtenheft Helferlein*,role=black] +
-
-
