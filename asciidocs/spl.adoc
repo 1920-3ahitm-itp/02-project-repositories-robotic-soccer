@@ -5,6 +5,14 @@ The standard platform league (SPL) is part of the international RoboCup. The Rob
 
 On a lower level the RoboCup is divided into several leagues which emphasize different areas of robotics. One can find leagues for industrial robots, humanoid robotics, robo soccer, and many more. The standard platform league is one of the four robo soccer leagues. The common goal of all the robo soccer leagues is to build robots which can play a soccer match against the FIFA world champion of 2050.
 
+The main teams of the league are
+
+- https://www.b-human.de/index-de.html[*BHuman*,role=black] +
+- https://hulks.de/[*HULKS*,role=black] +
+- https://www.htwk-leipzig.de/startseite/[*HTWK Leibzig*,role=black]
+- https://www.engineering.unsw.edu.au/computer-science-engineering/student-life/student-projects/robocup[*rUnswift*,role=black]
+
+
 == Goals
 The goals of the standard platform league is the development of software for autonomous robots for playing soccer. A very special feature of the SPL is that all robots taking part are of the same manifacturer (NAOs from SoftBank robotics) and the competition is focused on the quality of the software only.
 

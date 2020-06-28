@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <link rel="icon" type="image/png" href="themes/favicon.png">
-<title>Sachstandsbericht: Helferlein</title>
+<title>RoboDucks Development Cycle</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -448,114 +448,32 @@ pre.rouge .hll * {
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Sachstandsbericht: Helferlein</h1>
+<h1>RoboDucks Development Cycle</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_sachstand">1. Sachstand:</a></li>
-<li><a href="#_was_habe_ich_bereits_getan">2. Was habe ich bereits getan:</a></li>
-<li><a href="#_was_werde_ich_tun">3. Was werde ich tun:</a></li>
+<li><a href="#_overview">1. Overview</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/helferlein.html" class="black"><strong>Helferlein</strong></a>
-<a href="https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/index.html" class="black"><strong>Index</strong></a></p>
-</div>
-</div>
-</div>
 <div class="sect1">
-<h2 id="_sachstand"><a class="anchor" href="#_sachstand"></a>1. Sachstand:</h2>
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>1. Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Derzeit besteht eine mit Angular entwickelte Anwendung,
-die über Electron lokal läuft. Electron wird benötigt,
-um die TCP-Kommunikation mit den NAOs zu ermöglichen,
-da die dafür benötigten npm packages (tcp-client) im Web
-nicht verwendet werden können.</p>
+<p>Although the development cycle follows a strictly agile manner the quality assurance of the developed software is pretty crucial. Therefore the different steps of the development cycle can be mapped to the V-Model. The following diagram gives an overview:</p>
 </div>
-<div class="paragraph">
-<p>Die NAOs verschicken ihre Nachrichten mit allen Debug-Informationen
-als UInt8 Arrays, mit einem Header der 16 Byte lang ist. Der Code, der diese
-Nachrichten empfängt, den Header herausließt und dann die
-Nachricht in ein JSON-Objekt umwandelt funktioniert bereits,
-allerdings konnten durch das Distance Learning und dem
-daraus folgenden Fehlen von Robotern noch keine echten Daten
-verarbeitet werden.</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/vmodel.jpg" alt="vmodel">
 </div>
-<div class="paragraph">
-<p>Die grafische Oberfläche setzt sich aus
-mehreren Feldern, zusammen. Die Summe dieser Felder heißt Layout.
-In jedes dieser Felder lässt sich dann jeweils ein Widget laden.
-Widgets können beispielsweise einfach Daten vom NAO als Text sein,
-oder Live-Bilder von den Kameras oder sogar eine Topdown-Sicht
-des Spielfeldes auf dee Positionen und Sichtkegel von NAOs
-angezeigt werden können. Das Portal-System, mit dem die Widgets
-geladen werden, ist bereits lauffähig, allerdings sind die Widgets
-selbst nur teilweise implementiert. Zudem fehlt noch eine
-Funktion zum Erstellen und Speichern von eigenen Layouts.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_was_habe_ich_bereits_getan"><a class="anchor" href="#_was_habe_ich_bereits_getan"></a>2. Was habe ich bereits getan:</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Connection-Inputfelder positioniert und anschaulicher gemacht</p>
-</li>
-<li>
-<p>das Layout so geändert(Größe der Felder, Widget,&#8230;&#8203;)</p>
-</li>
-<li>
-<p>Überlappungen verhindert</p>
-</li>
-<li>
-<p>minimale Seitengröße festgelegt</p>
-</li>
-<li>
-<p>Text-Widgets</p>
-</li>
-<li>
-<p>Config-Widgets</p>
-</li>
-<li>
-<p>sonstige "quality of life" Änderungen&#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_was_werde_ich_tun"><a class="anchor" href="#_was_werde_ich_tun"></a>3. Was werde ich tun:</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Angular noch besser verstehen lernen(online Kurse machen,
-mir Übungen von den vierten zum Üben holen, den aktuellen
-Code noch genauer ansehen)</p>
-</li>
-<li>
-<p>das Helferlein Tool übernehmen sodass ich nächstes Jahr
-weitere Personen einschulen kann</p>
-</li>
-<li>
-<p>mich zu Electron File IO genauer erkundigen und hinein lesen.
-Und bestenfalls dies daraufhin anwenden um Configs lokal zu speichern</p>
-</li>
-</ul>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-06-28 21:05:54 UTC
+Last updated 2020-06-28 21:32:26 UTC
 </div>
 </div>
 </body>

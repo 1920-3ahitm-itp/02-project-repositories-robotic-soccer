@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <link rel="icon" type="image/png" href="themes/favicon.png">
-<title>Sachstandsbericht: Helferlein</title>
+<title>RoboDucks Software</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -448,105 +448,108 @@ pre.rouge .hll * {
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Sachstandsbericht: Helferlein</h1>
+<h1>RoboDucks Software</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_sachstand">1. Sachstand:</a></li>
-<li><a href="#_was_habe_ich_bereits_getan">2. Was habe ich bereits getan:</a></li>
-<li><a href="#_was_werde_ich_tun">3. Was werde ich tun:</a></li>
+<li><a href="#_overview">1. Overview</a></li>
+<li><a href="#_game_software">2. Game Software</a></li>
+<li><a href="#_game_controller">3. Game Controller</a></li>
+<li><a href="#_tools">4. Tools</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/helferlein.html" class="black"><strong>Helferlein</strong></a>
-<a href="https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/index.html" class="black"><strong>Index</strong></a></p>
-</div>
-</div>
-</div>
 <div class="sect1">
-<h2 id="_sachstand"><a class="anchor" href="#_sachstand"></a>1. Sachstand:</h2>
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>1. Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Derzeit besteht eine mit Angular entwickelte Anwendung,
-die über Electron lokal läuft. Electron wird benötigt,
-um die TCP-Kommunikation mit den NAOs zu ermöglichen,
-da die dafür benötigten npm packages (tcp-client) im Web
-nicht verwendet werden können.</p>
+<p>The RoboDucks Software can be basically divided into three parts</p>
 </div>
-<div class="paragraph">
-<p>Die NAOs verschicken ihre Nachrichten mit allen Debug-Informationen
-als UInt8 Arrays, mit einem Header der 16 Byte lang ist. Der Code, der diese
-Nachrichten empfängt, den Header herausließt und dann die
-Nachricht in ein JSON-Objekt umwandelt funktioniert bereits,
-allerdings konnten durch das Distance Learning und dem
-daraus folgenden Fehlen von Robotern noch keine echten Daten
-verarbeitet werden.</p>
-</div>
-<div class="paragraph">
-<p>Die grafische Oberfläche setzt sich aus
-mehreren Feldern, zusammen. Die Summe dieser Felder heißt Layout.
-In jedes dieser Felder lässt sich dann jeweils ein Widget laden.
-Widgets können beispielsweise einfach Daten vom NAO als Text sein,
-oder Live-Bilder von den Kameras oder sogar eine Topdown-Sicht
-des Spielfeldes auf dee Positionen und Sichtkegel von NAOs
-angezeigt werden können. Das Portal-System, mit dem die Widgets
-geladen werden, ist bereits lauffähig, allerdings sind die Widgets
-selbst nur teilweise implementiert. Zudem fehlt noch eine
-Funktion zum Erstellen und Speichern von eigenen Layouts.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_was_habe_ich_bereits_getan"><a class="anchor" href="#_was_habe_ich_bereits_getan"></a>2. Was habe ich bereits getan:</h2>
-<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>Connection-Inputfelder positioniert und anschaulicher gemacht</p>
+<p><strong>Game Software:</strong> The software running on the robots to make them play soccer</p>
 </li>
 <li>
-<p>das Layout so geändert(Größe der Felder, Widget,&#8230;&#8203;)</p>
+<p><strong>Game Controller:</strong> The software transmitting game relevant information to the robot</p>
 </li>
 <li>
-<p>Überlappungen verhindert</p>
-</li>
-<li>
-<p>minimale Seitengröße festgelegt</p>
-</li>
-<li>
-<p>Text-Widgets</p>
-</li>
-<li>
-<p>Config-Widgets</p>
-</li>
-<li>
-<p>sonstige "quality of life" Änderungen&#8230;&#8203;</p>
+<p><strong>Tools:</strong> Applications supporting development of the Game Software</p>
 </li>
 </ul>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="images/roboducks_software.svg" alt="roboducks software" width="479" height="471">
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_was_werde_ich_tun"><a class="anchor" href="#_was_werde_ich_tun"></a>3. Was werde ich tun:</h2>
+<h2 id="_game_software"><a class="anchor" href="#_game_software"></a>2. Game Software</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>The Game Software is structured into three parts:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Angular noch besser verstehen lernen(online Kurse machen,
-mir Übungen von den vierten zum Üben holen, den aktuellen
-Code noch genauer ansehen)</p>
+<p><strong>Brain:</strong> This part is responsible for implementing different player roles as well as the desision which role to take in a specific game situation.</p>
 </li>
 <li>
-<p>das Helferlein Tool übernehmen sodass ich nächstes Jahr
-weitere Personen einschulen kann</p>
+<p><strong>Vision:</strong> This part is responsible for processing the sensor data and to provide it to the Brain.</p>
 </li>
 <li>
-<p>mich zu Electron File IO genauer erkundigen und hinein lesen.
-Und bestenfalls dies daraufhin anwenden um Configs lokal zu speichern</p>
+<p><strong>Motion:</strong> This part is responisble for different actions of the NAO like moving, kicking, falling, etc and providing it to the brain.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>One of the two major parts of this projects was to implement the Striker as part of the Brain. A more elaborate discussion of this part can be found in <a href="https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/striker.html" class="black"><strong>Striker</strong></a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_game_controller"><a class="anchor" href="#_game_controller"></a>3. Game Controller</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Game Controller is required for sending game relevant data to the robots. Among others it provides the following information</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Game Commands:</strong> ready (make the robots aware of a game start), set (make the robots walk to their initial position), play (the game starts) and finish (round of the game is finished)</p>
+</li>
+<li>
+<p><strong>Penalties: </strong>Misbehavior of robots is penalized by timeouts (similar as in the hockey)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Game Controller is implemented by the team BHuman via their <a href="https://github.com/bhuman/GameController" class="black"><strong>github repo</strong></a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tools"><a class="anchor" href="#_tools"></a>4. Tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For developing the Game Software it is necessary to use different tools:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Midas:</strong> The build toolchain for the RoboDucks Game Software. It unifies the different tasks to build and upload the robot software across different hardware and software versions.</p>
+</li>
+<li>
+<p><strong>Mate:</strong> realtime information from the brain. Developers can monitor the currently  detected ball position, the current action suggested by the Brain to be taken by the robot, etc.</p>
+</li>
+<li>
+<p><strong>Helferlein:</strong> Successor of Mate written by the RoboDucks Team and moved from a phyton to angular base. This is the second major part of this project which is documented in more detail in <a href="https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/helferlein.html" class="black"><strong>Helferlein</strong></a>.</p>
+</li>
+<li>
+<p><strong>SimRobot:</strong> A software to simulate the NAOs in different game situation. It is written by the <a href="https://hulks.de/" class="black"><strong>HULKS team</strong></a>.</p>
 </li>
 </ul>
 </div>
@@ -555,7 +558,7 @@ Und bestenfalls dies daraufhin anwenden um Configs lokal zu speichern</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-06-28 21:05:54 UTC
+Last updated 2020-06-28 21:12:36 UTC
 </div>
 </div>
 </body>
