@@ -1,0 +1,58 @@
+= RoboDucks Software
+
+== Overview
+
+The RoboDucks Software can be basically divided into three parts
+
+- *Game Software:* The software running on the robots to make them play soccer
+- *Game Controller:* The software transmitting game relevant information to the robot
+- *Tools:* Applications supporting development of the Game Software
+
+[plantuml, roboducks_software, svg]
+....
+@startwbs
+* RoboDucks Software
+** Game Software
+*** Brain
+**** Keeper
+**** Striker
+**** Defender
+**** Bishop
+*** Vision
+*** Motion
+** Game Controller
+** Tools
+*** Midas
+*** Helferlein
+*** Mate
+*** SimRobot
+
+@endwbs
+....
+
+== Game Software
+The Game Software is structured into three parts:
+
+- *Brain:* This part is responsible for implementing different player roles as well as the desision which role to take in a specific game situation.
+- *Vision:* This part is responsible for processing the sensor data and to provide it to the Brain.
+- *Motion:* This part is responisble for different actions of the NAO like moving, kicking, falling, etc and providing it to the brain.
+
+One of the two major parts of this projects was to implement the Striker as part of the Brain. A more elaborate discussion of this part can be found in https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/striker.html[*Striker*,role=black].
+
+
+== Game Controller
+The Game Controller is required for sending game relevant data to the robots. Among others it provides the following information
+
+- *Game Commands:* ready (make the robots aware of a game start), set (make the robots walk to their initial position), play (the game starts) and finish (round of the game is finished)
+- **Penalties: **Misbehavior of robots is penalized by timeouts (similar as in the hockey)
+
+The Game Controller is implemented by the team BHuman via their https://github.com/bhuman/GameController[*github repo*,role=black].
+
+== Tools
+For developing the Game Software it is necessary to use different tools:
+
+- *Midas:* The build toolchain for the RoboDucks Game Software. It unifies the different tasks to build and upload the robot software across different hardware and software versions.
+- *Mate:* realtime information from the brain. Developers can monitor the currently  detected ball position, the current action suggested by the Brain to be taken by the robot, etc.
+- *Helferlein:* Successor of Mate written by the RoboDucks Team and moved from a phyton to angular base. This is the second major part of this project which is documented in more detail in https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/helferlein.html[*Helferlein*,role=black].
+- *SimRobot:* A software to simulate the NAOs in different game situation. It is written by the https://hulks.de/[*HULKS team*,role=black].
+
