@@ -453,6 +453,30 @@ pre.rouge .hll * {
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_overview">1. Overview</a></li>
+<li><a href="#_level_1">2. Level 1</a>
+<ul class="sectlevel2">
+<li><a href="#_specification">2.1. Specification</a></li>
+<li><a href="#_test">2.2. Test</a></li>
+</ul>
+</li>
+<li><a href="#_level_2">3. Level 2</a>
+<ul class="sectlevel2">
+<li><a href="#_specification_2">3.1. Specification</a></li>
+<li><a href="#_test_2">3.2. Test</a></li>
+</ul>
+</li>
+<li><a href="#_level_3">4. Level 3</a>
+<ul class="sectlevel2">
+<li><a href="#_specification_3">4.1. Specification</a></li>
+<li><a href="#_test_3">4.2. Test</a></li>
+</ul>
+</li>
+<li><a href="#_level_4">5. Level 4</a>
+<ul class="sectlevel2">
+<li><a href="#_specification_4">5.1. Specification</a></li>
+<li><a href="#_test_4">5.2. Test</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -461,11 +485,82 @@ pre.rouge .hll * {
 <h2 id="_overview"><a class="anchor" href="#_overview"></a>1. Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Although the development cycle follows a strictly agile manner the quality assurance of the developed software is pretty crucial. Therefore the different steps of the development cycle can be mapped to the V-Model. The following diagram gives an overview:</p>
+<p>Although the development cycle follows a strictly agile manner the quality assurance of the developed software is pretty crucial. Therefore the different steps of the development cycle can be mapped to the V-Model. The following diagram gives an overview (diagram taken from <a href="http://qa-talk.blogspot.com/2008/05/acceptance-testing.html" class="bare">http://qa-talk.blogspot.com/2008/05/acceptance-testing.html</a>):</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/vmodel.jpg" alt="vmodel">
+</div>
+</div>
+<div class="paragraph">
+<p>The model is split into five different levels from high-level, user&#8217;s perspective view to low-level, implementation view. In the sequel the different levels are enumerated from 1 (highest level) to 5 (lowest level).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_level_1"><a class="anchor" href="#_level_1"></a>2. Level 1</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_specification"><a class="anchor" href="#_specification"></a>2.1. Specification</h3>
+<div class="paragraph">
+<p>In this level the requirements are listed and the basic question of 'doing the right thing' is answered. In the particular case of the RoboDucks software the requirements for this level can be easily stated by the following sentence: 'The software shall make the NAOs play soccer according to the SPL rules'</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_test"><a class="anchor" href="#_test"></a>2.2. Test</h3>
+<div class="paragraph">
+<p>The test on this level is done by letting the software under test play soccer against the software of the previous version. This test is done only on the robots.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_level_2"><a class="anchor" href="#_level_2"></a>3. Level 2</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_specification_2"><a class="anchor" href="#_specification_2"></a>3.1. Specification</h3>
+<div class="paragraph">
+<p>On this level the interaction between the different robots of one team is specified. This is the first level where the question 'Doing things right' is answered.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_test_2"><a class="anchor" href="#_test_2"></a>3.2. Test</h3>
+<div class="paragraph">
+<p>The RoboDucks team tests this level by letting the software for the whole robot team play through different specific game scenarios. Again this test is done only on the robots</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_level_3"><a class="anchor" href="#_level_3"></a>4. Level 3</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_specification_3"><a class="anchor" href="#_specification_3"></a>4.1. Specification</h3>
+<div class="paragraph">
+<p>On this level the specification describes the behavior of different roles, e.g., the behavior of the striker when the ball is detected in the opponents part if the field.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_test_3"><a class="anchor" href="#_test_3"></a>4.2. Test</h3>
+<div class="paragraph">
+<p>On this level the first tests are done in the SimRobot environment. On a second step the software is tested on the real robot on the field. No interaction between different robots is considered.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_level_4"><a class="anchor" href="#_level_4"></a>5. Level 4</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_specification_4"><a class="anchor" href="#_specification_4"></a>5.1. Specification</h3>
+<div class="paragraph">
+<p>On this level the specification is rather informal since it can be directly derived from the specs given on the levels above. It is left to the developer to find a useful specification.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_test_4"><a class="anchor" href="#_test_4"></a>5.2. Test</h3>
+<div class="paragraph">
+<p>The Unit tests on this level are done by the developer manually. These tests are performed on SimRobot only.</p>
 </div>
 </div>
 </div>
@@ -473,7 +568,7 @@ pre.rouge .hll * {
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-06-28 21:32:26 UTC
+Last updated 2020-06-28 22:00:49 UTC
 </div>
 </div>
 </body>
