@@ -1,6 +1,7 @@
 = Pflichtenheft Humanoid Soccer -> Helferlein
 
 https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/index.html[*Index*,role=black] +
+https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/helferlein.html[*Helferlein*,role=black]
 
 // Settings
 :source-highlighter: coderay
