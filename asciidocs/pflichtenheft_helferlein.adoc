@@ -1,0 +1,130 @@
+= Pflichtenheft Humanoid Soccer -> Helferlein
+
+https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/index.html[*Index*,role=black] +
+
+// Settings
+:source-highlighter: coderay
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+// Refs:
+:imagesdir: images
+:sourcedir-code: src/main/java/at/htl/jdbcprimer
+:sourcedir-test: src/test/java/at/htl/jdbcprimer
+:toc:
+
+Version: 1.0 +
+Version Date: 27.07.2020 +
+Version Notes: Erste Version für uns, es gibt schon einen bestehenden Teil des Projekts +
+Author: Vanessa Primetzhofer +
+
+++++
+<link rel="stylesheet"  href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+++++
+
+
+== Beschreibung der Ausgangssituation
+Das Tool besteht bereits unter dem Namen Mate jedoch wurde dies vom HULKS Code übernommen und
+entspricht nicht zu 100% den Anforderungen des Teams. Es dient grundsätzlich zur Datenüberwachung.
+
+== Istzustand
+Vom Helferlein Tool existiert bereits das Grundgerüst bei dem noch kein Widget funktionsfähig ist.
+Außerdem gibt es auch am Design noch einge "quality of life" und Schöhnheitsmakel.
+
+=== Anwendung
+- Datenüberwachung
+- Anzeige von Bildübertagungen
+- Informationsanzeige von Werten
+
+== Problemstellung
+Derzeit wird noch der MATE von den HULKS verwendet und soll durch das neue Tool ersetzt werden.
+Bis zum nächsten Wettbewerb sollten die noch nicht funktionsfähigen Teile von den Schülern der HTL sein,
+umgesetzt werden.
+
+== Aufgabenstellung
+
+Das Helferlein soll den alten Code der HULKS ersetzten. Also im Grunde sollen die bestehenden
+Funktionen übernommen und erweitert beziehungsweise verbessert werden.
+
+=== Funktionale Anforderungen
+
+==== Anwendungsfalldiagramm (Use-Case-Diagram)
+
+image::UseCaseHelferlein.png[]
+
+==== Use-Case 1: Nao Verbindung
+
+===== Charakterisierende Informationen Use-Case 1
+
+[cols=2]
+|===
+| Übergeordneter elementarer Geschäftsprozess:
+| Nao IP Eingabe
+
+| Ziel des Use Cases:
+| Verbindung zum Nao aufbauen
+
+| Umgebende Systemgrenze:
+| Um die Datenverwaltung die beim Nao passiert müssen wir uns nicht kümmern.
+
+| Vorbedingung:
+| Nao ist eingeschaltet und kann Daten senden.
+
+| Beschreibung:
+a|
+* Benutzer befindet sich im selben Netzwerk wie der Nao
+* Benutzer gibt IP des Naos ein
+* Verbindung zum Nao wird aufgebaut
+* Daten werden zum Benutzer gesendet
+
+| Beteiligte Nutzer:
+| Nao
+
+
+| Auslösendes Ereignis:
+| Send Button
+|===
+
+==== Use-Case 2: Datenaufruf
+
+===== Charakterisierende Informationen Use-Case 2
+
+[cols=2]
+|===
+| Übergeordneter elementarer Geschäftsprozess:
+| Datenaufruf
+
+| Ziel des Use Cases:
+| Die richtigen Daten vom Nao aufrufen und erhalten
+
+| Umgebende Systemgrenze:
+| Um die Datenverwaltung die beim Nao passiert müssen wir uns nicht kümmern.
+
+| Vorbedingung:
+| Nao ist eingeschaltet, verbunden und kann Daten senden.
+
+| Beschreibung:
+a|
+* Benutzer gibt Key ein von dem er die Daten sehen will
+* Aufruf wird verarbeitet und an Nao gesendet
+* Daten werden zurückgesendet
+* Daten werden angezeigt
+
+| Beteiligte Nutzer:
+| Nao
+
+
+| Auslösendes Ereignis:
+| Key Eingabe
+|===
+
+== Zielsetzung
+-  Angular noch besser verstehen lernen(online Kurse machen,
+mir Übungen von den vierten zum Üben holen, den aktuellen
+Code noch genauer ansehen)
+-  das Helferlein Tool übernehmen sodass ich nächstes Jahr
+weitere Personen einschulen kann
+-  mich zu Electron File IO genauer erkundigen und hinein lesen.
+Und bestenfalls dies daraufhin anwenden um Configs lokal zu speichern
+
+== Mengengerüst
+Es wird ein Nao benötigt.
