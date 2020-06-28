@@ -1,13 +1,16 @@
 = Helferlein
 
-https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/index.html[*Index*,role=black]
+https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/index.html[*Index*,role=white]
 
 == Allgemein
 
 Das Helferlein wird zukünftig Mate ersetzten.
 Es dient zur Datenüberwachung, Anzeige von Bildübertagungen
-und sonstigen Informationenanzeige von Werten
+und sonstigen Informationsanzeige von Werten,
 die vom Nao kommen, mit dem man verbunden ist.
+Diese Werte verschickt der NAO als Key-Value Pairs im
+Json-Format, wobei die Frequenz dieser Nachrichten einem
+"Cycle" des Hauptprogrammes entspricht.
 Also kurz beschrieben dient es zum Monitoring.
 Man kann selbst bestimmen von welchen Keys man die Values sehen
 will und diese werden, wenn man mit einem Nao verbunden ist

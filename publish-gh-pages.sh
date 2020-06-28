@@ -7,7 +7,7 @@ export old=${PWD}
 ${PWD}/build-html-docker.sh
 cd docs
 git add .
-git commit -m "update Demo Website"
+git commit -m "update Helferlein Website"
 git push origin master
 cd $old
 
