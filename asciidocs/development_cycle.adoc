@@ -1,0 +1,39 @@
+= RoboDucks Development Cycle
+
+== Overview
+Although the development cycle follows a strictly agile manner the quality assurance of the developed software is pretty crucial. Therefore the different steps of the development cycle can be mapped to the V-Model. The following diagram gives an overview (diagram taken from http://qa-talk.blogspot.com/2008/05/acceptance-testing.html):
+
+image::vmodel.jpg[]
+
+The model is split into five different levels from high-level, user's perspective view to low-level, implementation view. In the sequel the different levels are enumerated from 1 (highest level) to 5 (lowest level).
+
+== Level 1
+=== Specification
+In this level the requirements are listed and the basic question of 'doing the right thing' is answered. In the particular case of the RoboDucks software the requirements for this level can be easily stated by the following sentence: 'The software shall make the NAOs play soccer according to the SPL rules'
+
+=== Test
+The test on this level is done by letting the software under test play soccer against the software of the previous version. This test is done only on the robots.
+
+== Level 2
+
+=== Specification
+On this level the interaction between the different robots of one team is specified. This is the first level where the question 'Doing things right' is answered.
+
+=== Test
+The RoboDucks team tests this level by letting the software for the whole robot team play through different specific game scenarios. Again this test is done only on the robots
+
+== Level 3
+
+=== Specification
+On this level the specification describes the behavior of different roles, e.g., the behavior of the striker when the ball is detected in the opponents part if the field.
+
+=== Test
+On this level the first tests are done in the SimRobot environment. On a second step the software is tested on the real robot on the field. No interaction between different robots is considered.
+
+== Level 4
+
+=== Specification
+On this level the specification is rather informal since it can be directly derived from the specs given on the levels above. It is left to the developer to find a useful specification.
+
+=== Test
+The Unit tests on this level are done by the developer manually. These tests are performed on SimRobot only.

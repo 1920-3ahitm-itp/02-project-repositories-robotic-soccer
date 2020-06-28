@@ -1,0 +1,6 @@
+= Striker
+
+The documentation of the striker consists of the following parts
+
+- https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/pflichtenheft_striker.html[*Striker System Specification*,role=black]
+- https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/striker_development_setup.html[*Striker Development Setup*,role=black]
