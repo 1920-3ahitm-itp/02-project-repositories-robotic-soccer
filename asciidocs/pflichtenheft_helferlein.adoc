@@ -14,7 +14,7 @@ https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/helferl
 :toc:
 
 Version: 1.0 +
-Version Date: 27.07.2020 +
+Version Date: 27.06.2020 +
 Version Notes: Erste Version für uns, es gibt schon einen bestehenden Teil des Projekts +
 Author: Vanessa Primetzhofer +
 
@@ -38,7 +38,7 @@ Außerdem gibt es auch am Design noch einge "quality of life" und Schöhnheitsma
 
 == Problemstellung
 Derzeit wird noch der MATE von den HULKS verwendet und soll durch das neue Tool ersetzt werden.
-Bis zum nächsten Wettbewerb sollten die noch nicht funktionsfähigen Teile von den Schülern der HTL sein,
+Bis zum nächsten Wettbewerb sollten die noch nicht funktionsfähigen Teile von den Schülern der HTL
 umgesetzt werden.
 
 == Aufgabenstellung
