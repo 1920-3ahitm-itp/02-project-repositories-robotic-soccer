@@ -29,7 +29,7 @@ entspricht nicht zu 100% den Anforderungen des Teams. Es dient grundsätzlich zu
 
 == Istzustand
 Vom Helferlein Tool existiert bereits das Grundgerüst bei dem noch kein Widget funktionsfähig ist.
-Außerdem gibt es auch am Design noch einge "quality of life" und Schöhnheitsmakel.
+Außerdem fehlen noch einige Funktionen und es gibt auch am Design noch einge "quality of life" und Schöhnheitsmakel.
 
 === Anwendung
 - Datenüberwachung
