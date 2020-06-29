@@ -70,4 +70,4 @@ image::Systemarchitektur.jpeg[]
 Nao glaubt er steht an seiner Position, was man dann an den angezeigten Werten erkennen kann,
 jedoch steht er in Wirklichkeit an einer anderen Position am Feld.
 
-https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/sachbestand.html[Sachstand Helferlein,role=black]
+https://1920-3ahitm-itp.github.io/02-project-repositories-robotic-soccer/sachbestand_helferlein.html[Sachstand Helferlein,role=black]
